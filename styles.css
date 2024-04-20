@@ -1,0 +1,574 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+body {
+    font-family: 'Archivo Black', sans-serif;
+        margin: 0;
+    padding: 0;
+    background-color: #111; /* Black */
+    color: #ddd;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Specify two equal-width columns */
+    grid-gap: 20px;
+}
+
+
+.asset {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.asset:hover {
+    transform: translateY(-5px);
+}
+
+.asset img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.asset-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.asset:hover .asset-overlay {
+    opacity: 1;
+}
+
+.asset img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.asset-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+}
+
+.asset-overlay a, .asset-overlay button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px; /* Consistent padding for uniform size */
+    background-color: #666; /* Dark Gray */
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    margin-right: 10px; /* Add margin between buttons */
+    font-family: 'Archivo Black', sans-serif; /* Ensure consistent font family */
+    font-size: 14px; /* Ensure consistent font size */
+}
+
+.asset-overlay button:hover, .asset-overlay a:hover {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    z-index: 999; /* Ensure it's on top of everything */
+    display: none; /* Initially hidden */
+}
+
+.overlay.active {
+    display: block; /* Display when active */
+}
+
+
+
+.asset img.preview {
+    max-width: 80%; /* Limit maximum width to 80% of viewport */
+    max-height: 80%; /* Limit maximum height to 80% of viewport */
+    position: fixed;
+    top: 50%; /* Center the image vertically */
+    left: 50%; /* Center the image horizontally */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    z-index: 9999; /* Ensure it's on top */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    cursor: pointer;
+    pointer-events: none;
+    animation: popUp 0.3s ease-in-out forwards; /* Apply the popUp animation */
+}
+
+/* Navigation Bar */
+/* Import the Lato font from Google Fonts */
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Vertically align elements */
+    background-color: #333; /* Background color */
+    padding: 15px 20px; /* Adjust padding */
+    color: white; /* Font color */
+    height: 60px; /* Set a consistent height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    
+    
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    align-items: center; /* Vertical alignment of links */
+    gap: 20px; /* Space between links */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    list-style: none; /* Remove list markers */
+    height: 100%; /* Ensure full height */
+    font-family: 'Archivo Black', sans-serif; /* Use Archivo Black font */
+    font-size: 16px; /* Adjust font size */
+}
+
+/* CSS code for navigation bar links */
+nav .nav-links a {
+    color: rgb(255, 255, 255); /* Initial link color */
+    text-decoration: none;
+    padding: 10px; /* Padding around the link */
+    position: relative; /* To allow positioning of the box */
+}
+
+/* When hovering over the link */
+nav .nav-links a:hover {
+    color: #fff; /* Change text color */
+    background-color: gray; /* Change background color */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    padding: 10px; /* Add padding for a box-like appearance */
+}
+
+/* Styling for the authentication buttons container */
+.auth-buttons {
+    display: flex; /* Arrange buttons in a row */
+    gap: 10px; /* Space between the buttons */
+}
+
+/* Styling for the Login button */
+.login-button {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    background-color: #333; /* Dark color for the Login button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.login-button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+
+
+
+/* Styling for the Sign Up button */
+.sign-up-button {
+    padding: 10px 20px; /* Adjust the padding as needed */
+    background-color: #007bff; /* Bright blue color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+ 
+}
+
+.sign-up-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Filter Container */
+.filter-container {
+    position: relative;
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
+}
+
+/* Filter Button */
+.filter-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #666;
+    color: white;
+    font-family: 'Archivo Black', sans-serif;
+    cursor: pointer;
+
+}
+
+/* Filter List */
+.filter-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px; /* Add space between filter button and filter list */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for the filter list */
+}
+
+/* Filter List Active */
+.filter-list.active {
+    display: block; /* Show when active */
+}
+
+/* Filter Options */
+.filter-option {
+    display: block; /* Makes each option a block element */
+    padding: 5px 10px; /* Add padding for spacing around the text */
+    margin-bottom: 5px; /* Add margin between each option */
+    color: white; /* Color of the text */
+    text-decoration: none; /* Remove default underline from links */
+ 
+    border-radius: 5px; /* Optional: Rounded corners */
+}
+
+
+.filter-option:hover {
+    background-color: #555; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Filter list styling */
+.filter-list {
+    position: absolute; /* Ensure the filter list is positioned relative to its parent */
+    top: 100%; /* Adjust the positioning as needed */
+    left: 0;
+    z-index: 1000; /* Set a high z-index value to ensure it appears on top of other elements */
+    background-color: #333; /* Adjust the background color as needed */
+    border: 1px solid #000000; /* Optional border */
+    padding: 10px; /* Adjust padding as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+    
+}
+
+.logo {
+    height: 40px; /* Adjust the height of the logo as desired */
+    margin-right: 10px; /* Add space between the logo and text */
+}
+
+.site-title {
+    display: flex; /* Use flexbox layout for better alignment */
+    align-items: center; /* Vertically center the logo and text */
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Modal */
+
+/* Modal Styles */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position */
+    z-index: 1000; /* High z-index to stay on top */
+    padding-top: 60px; /* Padding for content centering */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    pointer-events: none;
+   
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #333; /* White background */
+    margin: auto; /* Center the modal content on the page */
+    padding: 20px; /* Add padding */
+    border-radius: 15px; /* Rounded corners */
+    width: 400px; /* Width of the modal */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center; /* Center-align text */
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/* Centering logo and website name in the modal */
+.modal-content .site-title {
+    display: flex;
+    flex-direction: column; /* Stack the logo and website name vertically */
+    align-items: center; /* Center-align the content */
+    margin-bottom: 20px; /* Space between the title and other content */
+}
+
+/* Form Fields */
+form label {
+    color: black; /* Text color */
+    font-family: 'Archivo Black', sans-serif; /* Apply Open Sans font */
+    font-weight: 700; /* Bold font weight */
+    margin-bottom: 5px; /* Margin at the bottom */
+    text-align: left; /* Align text to the left */
+    display: block; /* Make the label a block element */
+}
+
+form input {
+    width: 90%; /* Adjust width as needed */
+    padding: 10px; /* Padding */
+    margin-bottom: 10px; /* Space between fields */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.modal-content .site-title .logo {
+    height: 30px !important; /* Adjust the height of the logo within the modal */
+    margin-right: 10px; /* Add space between the logo and text */
+}
+
+/* Specificity increased */
+#sign-up-modal .site-title .logo {
+    height: 30px !important; /* Adjust the height of the logo within the signup modal */
+}
+
+#login-modal .site-title .logo {
+    height: 30px !important; /* Adjust the height of the logo within the login modal */
+}
+
+.modal-content h1 {
+    color: white; /* Font color */
+    margin: 0; /* Remove margin */
+}
+
+
+/* Close Button */
+.close-button {
+    color: white; /* Color of the close button */
+    font-size: 28px; /* Size of the close button */
+    font-weight: bold; /* Make it bold */
+    position: absolute; /* Position it in the top-right corner */
+    right: 10px; /* Adjust position */
+    top: 10px; /* Adjust position */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Form Fields */
+form label {
+    color: white; /* White text */
+}
+
+form input {
+    width: 90%; /* Adjust width as needed */
+    padding: 10px; /* Padding */
+    margin-bottom: 10px; /* Space between fields */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* Submit Button */
+.submit-button {
+    padding: 10px 20px; /* Padding */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: 'Archivo Black', sans-serif;
+}
+
+/* Form elements */
+/* Contact form modal container */
+#contact-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1000;
+}
+
+/* Modal content */
+#contact-modal .modal-content {
+    background-color: #333; /* Light background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Set width as needed */
+    margin: 10% auto; /* Center the modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Archivo Black', sans-serif; /* Use Archivo Black font */
+}
+
+/* Close button */
+#contact-modal .close-button {
+    float: right;
+    font-size: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    color: #333;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Form elements */
+#contact-modal input[type="text"],
+#contact-modal input[type="email"],
+#contact-modal textarea {
+    width: 90%; /* Full width */
+    padding: 8px;
+    margin: 10px 0; /* Add margin between elements */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+    
+}
+
+/* Form buttons */
+#contact-modal .submit-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Bold text */
+}
+
+#contact-modal .submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* CSS for About Us modal */
+.about-us-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.about-us-modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.about-us-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.about-us-logo img {
+    width: 150px;
+    height: auto;
+}
+
+.about-us-text {
+    margin-top: 15px;
+}
+/* Unique Modal Styles */
+.unique-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the modal content */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scrolling */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+.unique-modal-content {
+    background-color: #333; /* White background */
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%; /* Width of modal */
+    max-width: 500px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.unique-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.unique-submit-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.unique-submit-button:hover {
+    background-color: #555;
+}

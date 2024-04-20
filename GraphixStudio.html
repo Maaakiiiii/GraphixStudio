@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPHIX STUDIO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <h1 class="site-title">
+            <img src="Logo.png" alt="Graphix Studio Logo" class="logo"> GRAPHIX STUDIO
+        </h1>
+     <!-- Navigation bar (partial) -->
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="#" id="unique-notify-button">NOTIFICATION</a></li>
+        <li><a href="#" id="featured-button">FEATURED</a></li>
+        <li><a href="#" id="about-us-link">ABOUT US</a> </li>
+        <li><a href="#" id="contact-us-button">CONTACT US</a></li> <!-- Contact button -->
+    </ul>
+</nav>
+                <!-- Filter button and list -->
+                <div class="filter-container">
+                    <button class="filter-button">FILTER</button>
+                    <!-- Filter list (Initially hidden) -->
+                    <div class="filter-list">
+                        <a href="#" class="filter-option" data-filter="all">All</a>
+                        <a href="#" class="filter-option" data-filter="background">Background</a>
+                       <a href="#" class="filter-option" data-filter="wallpaper">Wallpapers</a>
+                        <a href="#" class="filter-option" data-filter="stock">Stock Images</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        
+        <!-- Login and Sign Up buttons -->
+        <div class="auth-buttons">
+            <button class="login-button">LOGIN</button>
+            <button class="sign-up-button">SIGN UP</button>
+        </div>
+    </nav>
+
+<!-- About Us Modal -->
+<div id="about-us-modal" class="about-us-modal">
+    <div class="about-us-modal-content">
+        <span class="about-us-close-btn">&times;</span> <!-- Close button -->
+        <div class="about-us-content">
+            <div class="about-us-logo">
+                <img src="Logo.png" alt="GRAPHIX STUDIO"> <!-- Logo -->
+            </div>
+            <div class="about-us-text">
+                <p>Our website is your one-stop destination for high-quality digital assets. Whether you're seeking stunning wallpapers, versatile graphics, or beautiful backgrounds, we've got it all. Our user-friendly platform makes browsing and downloading easy, with curated categories and engaging previews. We aim to inspire creativity and provide exceptional resources to designers and enthusiasts alike. Thank you for choosing our website as your go-to resource for digital assets!</p> <!-- Brief statement -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="unique-notification-modal" class="unique-modal">
+    <div class="unique-modal-content">
+        <span class="unique-close-button">&times;</span>
+        <h2>Notifications</h2>
+        <p>Would you like to allow notifications for updates?</p>
+        <button id="unique-allow-notifications" class="unique-submit-button">Allow</button>
+        <button id="unique-decline-notifications" class="unique-submit-button">Decline</button>
+    </div>
+</div>
+
+<!-- Existing modal -->
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Main content -->
+    <div class="container">
+        <!-- Image 1 -->
+        <div class="asset" data-category="stock">
+            <img src="image1.jpg" alt="Stock Image 1">
+            <div class="asset-overlay">
+                <button class="preview-button">Preview</button>
+                <a href="image1.jpg" download>Download</a>
+            </div>
+        </div>
+        <!-- Image 2 -->
+        <div class="asset" data-category="stock">
+            <img src="image2.jpg" alt="Stock Image 2">
+            <div class="asset-overlay">
+                <button class="preview-button">Preview</button>
+                <a href="image2.jpg" download>Download</a>
+            </div>
+        </div>
+        <!-- Image 3 -->
+        <div class="asset" data-category="stock">
+            <img src="image3.jpg" alt="Stock Image 3">
+            <div class="asset-overlay">
+                <button class="preview-button">Preview</button>
+                <a href="image3.jpg" download>Download</a>
+            </div>
+        </div>
+        <!-- Image 4 -->
+        <div class="asset" data-category="stock">
+            <img src="image4.jpg" alt="Stock Image 4">
+            <div class="asset-overlay">
+                <button class="preview-button">Preview</button>
+                <a href="image4.jpg" download>Download</a>
+            </div>
+        </div>
+        <!-- Image 5 -->
+        <div class="asset" data-category="stock">
+            <img src="image5.jpg" alt="Stock Image 5">
+            <div class="asset-overlay">
+                <button class="preview-button">Preview</button>
+                <a href="image5.jpg" download>Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="asset" data-category="stock">
+        <img src="image6.jpg" alt="Stock Image 6">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="image6.jpg" download>Download</a>
+        </div>
+    </div>
+</div>
+
+    <!-- Background Images Section -->
+<div class="container">
+    <!-- Background Image 1 -->
+    <div class="asset" data-category="background">
+        <img src="background1.jpg" alt="Background Image 1">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="background1.jpg" download>Download</a>
+        </div>
+    </div>
+    <!-- Background Image 2 -->
+    <div class="asset" data-category="background">
+        <img src="background2.jpg" alt="Background Image 2">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="background2.jpg" download>Download</a>
+        </div>
+        <div class="asset" data-category="background">
+            <img src="background3.jpg" alt="Background Image 3">
+            <div class="asset-overlay">
+                <button class="preview-button">Preview</button>
+                <a href="background3.jpg" download>Download</a>
+            </div>
+
+            <div class="asset" data-category="background">
+                <img src="background4.jpg" alt="Background Image 4">
+                <div class="asset-overlay">
+                    <button class="preview-button">Preview</button>
+                    <a href="background4.jpg" download>Download</a>
+                </div>
+                <div class="asset" data-category="background">
+                    <img src="background5.jpg" alt="Background Image 5">
+                    <div class="asset-overlay">
+                        <button class="preview-button">Preview</button>
+                        <a href="background5.jpg" download>Download</a>
+                    </div>
+                    <div class="asset" data-category="background">
+                        <img src="background6.jpg" alt="Background Image 6">
+                        <div class="asset-overlay">
+                            <button class="preview-button">Preview</button>
+                            <a href="background6.jpg" download>Download</a>
+                        </div>
+        
+
+  <!-- Wallpaper Images Section -->
+  <div class="container">
+    <!-- Background Image 1 -->
+    <div class="asset" data-category="wallpaper">
+        <img src="wallpaper1.jpg" alt="Wallpaper Image 1">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="wallpaper1.jpg" download>Download</a>
+        </div>
+    </div>
+
+    <div class="asset" data-category="wallpaper">
+        <img src="wallpaper2.jpg" alt="Wallpaper Image 2">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="wallpaper2.jpg" download>Download</a>
+        </div>
+    </div>
+
+    <div class="asset" data-category="wallpaper">
+        <img src="wallpaper3.jpg" alt="Wallpaper Image 3">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="wallpaper3.jpg" download>Download</a>
+        </div>
+    </div>
+
+    <div class="asset" data-category="wallpaper">
+        <img src="wallpaper4.jpg" alt="Wallpaper Image 4">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="wallpaper4.jpg" download>Download</a>
+        </div>
+    </div>
+
+    <div class="asset" data-category="wallpaper">
+        <img src="wallpaper5.jpg" alt="Wallpaper Image 5">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="wallpaper5.jpg" download>Download</a>
+        </div>
+    </div>
+
+    <div class="asset" data-category="wallpaper">
+        <img src="wallpaper6.jpg" alt="Wallpaper Image 6">
+        <div class="asset-overlay">
+            <button class="preview-button">Preview</button>
+            <a href="wallpaper6.jpg" download>Download</a>
+        </div>
+    </div>
+    
+    
+
+
+    <!-- Sign Up Modal -->
+    <div id="sign-up-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 class="site-title">
+                <img src="Logo.png" alt="Graphix Studio Logo" class="logo"> GRAPHIX STUDIO
+            </h2>
+            <h3>SIGN UP</h3>
+            <form id="sign-up-form">
+                <label for="name">NAME:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">EMAIL:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">PASSWORD:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit" class="submit-button">SIGN UP</button>
+
+            </form>
+        </div>
+    </div>
+    <!-- Login Modal -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 class="site-title">
+            <img src="Logo.png" alt="Graphix Studio Logo" class="logo"> GRAPHIX STUDIO
+        </h2>
+        <h3>LOGIN</h3>
+        <form id="login-form">
+            <label for="login-email">EMAIL:</label>
+            <input type="email" id="login-email" name="email" required>
+            
+            <label for="login-password">PASSWORD:</label>
+            <input type="password" id="login-password" name="password" required>
+            
+            <button type="submit" class="submit-button">LOGIN</button>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Contact Us Modal -->
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span> <!-- Close button -->
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="submit-button">Send</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Overlay for preview -->
+    <div class="overlay"></div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
